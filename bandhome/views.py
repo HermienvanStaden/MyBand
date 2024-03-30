@@ -7,6 +7,12 @@ from .forms import SignUpForm
 
 # Create your views here.
 def index(request):
+    """ A function that receives a user request and renders
+        the "bandhome/authentication/index.html" view.
+
+        :return: View rendering
+        :rtype: html view
+    """
     return render(request, "bandhome/authentication/index.html")
 
 # Request information from new user
