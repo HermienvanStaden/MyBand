@@ -1,0 +1,21 @@
+{% extends "bandhome/header.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- Display authenticated user's username-->
+    <div class="container mt-5">
+        <img alt="Feral logo medium" src="{% static 'bandhome/Images/logo_m_blackandred.jpg' %}">
+        <h4 class="text-danger mt-5 mb-3">{{ user.username }}, would you like to: </h4>
+
+        <!-- Provide links to about-page, blog and tours -->
+        <div class="container m-5 ms-0">
+            <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:about' %}">Find out about us</a></b></button>
+            <br/><br/>
+            <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandblog:blog' %}">Go to blog</a></b></button>
+            <br/><br/>
+            <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandtour:tour' %}">Go to tours</a></b></button>
+        </div>    
+    </div>
+{% endblock %}

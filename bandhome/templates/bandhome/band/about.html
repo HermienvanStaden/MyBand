@@ -1,0 +1,30 @@
+{% extends "bandhome/header.html" %}
+{% load static %}
+
+<!-- Template to display band information, with a link to main menu -->
+
+{% block content %}
+    <div class="container m-5">
+        <img alt="Feral logo large" src="{% static 'bandhome/Images/logo_l_blackandred.jpg' %}">
+        <h4 class="mt-5 text-danger">Learn more about Feral</h4>
+        <p class="col-sm-8">We are a hardcore punk band based in Johannesburg, South Africa.
+            The band was founded by brother and sister team Adam and Lisa Palaszczuk.
+            Marilyn and Ben has been part of the line-up almost from the start.
+        </p>
+        <p class="col-sm-8">We all bring different influences to the band:
+            Lisa loves metal, the screechier the better. 
+            Ben has a soft spot for skate punk, but also sees the value of thrash metal.
+            Marilyn loves classic punk and her guilty pleasure is arena rock. Just for the drumming, she says...
+            Adam's taste is trapped in hardcore punk as last heard in LA in the 80s.
+        </p>
+
+        <h5 class="text-danger">Members</h5>
+        <ul>
+            <li><b>Lisa Palaszczuk</b>: Lead vocals, guitar</li>
+            <li><b>Adam Palaszczuk</b>: Lead vocals, guitar</li>
+            <li><b>Marilyn McGregor</b>: Drums</li>
+            <li><b>Ben Gaju</b>: Base</li>
+        </ul>
+        <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:home-home' %}">Back to menu</a></b></button>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "bandhome/header.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- Display form for new user to sign up -->
+    <div class="container">
+        <img alt="Feral logo medium" src="{% static 'bandhome/Images/logo_m_blackandred.jpg' %}">
+        <div class="row m-5 ms-0">
+            <h2 class="text-bg-danger col-sm-9">Sign Up</h2>
+        </div>
+        <div class="container ms-0 col-sm-8">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <br>
+                <input type="submit" value="Sign Up"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "bandhome/header.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- Log in with all five fields required -->
+    <div class="container m-5">
+        <img alt="Feral logo large" src="{% static 'bandhome/Images/logo_m_blackandred.jpg' %}">
+        <h2>Log in</h2>
+
+        <form action="{% url 'bandhome:authenticate_user' %}" method="post">
+            {{ form|crispy }}
+            {% csrf_token %}
+            
+            <label>First name</label>
+            <input type="text" name="first_name" required>
+            <br/><br/>
+
+            <label>Surname</label>
+            <input type="text" name="last_name" required>
+            <br/><br/>
+
+            <label>Email</label>
+            <input type="text" name="email" required>
+            <br/><br/>
+
+            <label>Username</label>
+            <input type="text" name="username" placeholder="User" required>
+            <br/><br/>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <br/><br/>
+
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+{% endblock %}

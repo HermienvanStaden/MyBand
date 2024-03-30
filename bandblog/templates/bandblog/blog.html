@@ -1,0 +1,14 @@
+{% extends "bandblog/header.html" %}
+{% load static %}
+
+<!-- Template to display the main page of the bandblog app
+     and give the user the option to return to main menu -->
+
+{% block content %}
+    {% for post in object_list %}
+    <h4 class="mt-5 mb-3 text-danger">{{ post.date|date:"Y-m-d" }}<a href="/bandblog/{{post.id}}">
+{{ post.title }}</a></h4>
+    {% endfor %}
+    <br>
+    <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:home-home' %}">Back to menu</a></b></button>
+{% endblock %}

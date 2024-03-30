@@ -1,0 +1,20 @@
+{% extends "bandtour/header.html" %}
+{% load static %}
+
+<!-- Template to display list of tour dates and locations, with
+     a link back to the main menu -->
+
+{% block title %}
+    Tour List
+{% endblock %}
+
+            
+{% block content %}
+    <h2 class="mt-5 mb-3 text-danger">Upcoming concert dates:</h2>
+    {% for post in object_list %}
+        <h5>{{ post.date|date:"Y-m-d" }}<a href="/bandtour/{{post.id}}">
+    {{ post.location }}</a></h5>
+        {% endfor %}
+        <br>
+        <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:home-home' %}">Back to menu</a></b></button>  
+{% endblock %}

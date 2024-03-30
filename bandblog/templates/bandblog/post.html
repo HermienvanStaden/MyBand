@@ -1,0 +1,17 @@
+{% extends "bandblog/header.html" %}
+{% load static %}
+
+<!-- Template to display individual blog posts. A link to 
+     the main menu is included at the bottom. -->
+
+{% block content %}
+<h4 class="mt-5 mb-3 text-danger"><a href="/bandblog/{{ post.id }}">{{ post.title }}</a></h4>
+<h6> on {{ post.date }}</h6>
+<div class="container">
+    <div class="col-sm-8 ms-0">
+        {{ post.body|safe|linebreaks }}
+    </div>
+</div>
+<br>
+<button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandblog:blog' %}">Back to blog posts</a></b></button>  
+{% endblock %}

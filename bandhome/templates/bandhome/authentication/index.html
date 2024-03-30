@@ -1,0 +1,21 @@
+{% extends "bandhome/header.html" %}
+{% load static %}
+
+<!-- Template to display the first page a user sees,
+      asking them to login or sign up.-->
+
+{% block content %}
+    <img alt="Feral logo large" src="{% static 'bandhome/Images/logo_l_blackandred.jpg' %}">
+    <div class="container mt-3">
+        <h3 class="text-danger">Welcome to the official home of Feral</h3>
+        <br/>
+        <h5><b>Log in</b> to access more info about us, our music, tours and merch.</h5>
+    </div>
+    <div class="container mt-2 mb-2">
+        <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:login' %}">Log in</a></b></button>
+    </div>
+    <div class="container mt-5 mb-2">
+        <h5>...Or, <b>sign up</b>, if you are not already a member:</h5>
+        <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:signup' %}">Sign up</a></b></button>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "bandtour/header.html" %}
+{% load static %}
+
+<!-- Template to display details of a tour item, with a link 
+     back to main tour page -->
+
+{% block title %}
+  {{ post.location }} {{ post.date }}
+{% endblock %}
+
+{% block content %}
+  <h1 class="mt-5 mb-3 text-danger">{{ post.location }}, {{ post.date|date:"d F Y" }}</h1>
+  <div class="container">
+    <p>Venue: {{ post.venue }}</p>
+    <p>Time: {{ post.time }}</p>
+    <p>Tickets: {{ post.tickets }}</p>
+    </div>
+    <br/>
+  <button type="button" class="btn btn-outline-danger"><b><a href="/bandtour/">Back to tour dates</a></b></button>  
+{% endblock %}   

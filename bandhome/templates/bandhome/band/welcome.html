@@ -1,0 +1,24 @@
+{% extends "bandhome/header.html" %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- Display authenticated user's username and all login fields -->
+    <div class="container m-5">
+        <img alt="Feral logo medium" src="{% static 'bandhome/Images/logo_m_blackandred.jpg' %}">
+        <h3 class="mb-4 mt-5 text-danger"> Welcome, {{ username }}! </h3>
+        <div class="container ms-0 mt-3 col-sm-4">
+            <h5 class="mb-3 text-danger"><b>Your details:</b></h5>
+            <p><b>First name:</b> {{ user.first_name }}</p>
+            <p><b>Surname:</b> {{ user.last_name }}</p>
+            <p><b>Email address:</b> {{ user.email }}</p>
+            <p><b>Username:</b> {{ username }}</p>
+            <p><b>Password:</b> {{ password }}</p>
+        </div>
+    </div>
+    <!-- Provides a link to main menu -->
+    <div class="container m-5">
+        <button type="button" class="btn btn-outline-danger"><b><a href="{% url 'bandhome:home-home' %}">Go to menu</a></b></button>
+    </div>
+{% endblock %}
