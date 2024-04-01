@@ -80,7 +80,7 @@ In order to run this container you'll need docker installed.
 **Hermien van Staden** 
 
 * [GitHub] (https://github.com/hermienvanstaden)
-* [LinkedIn] (linkedin.com/in/hermien-van-staden-1a03b6106)
+* [LinkedIn] (www.linkedin.com/in/hermien-van-staden-1a03b6106)
 * [Email] hermienvanstaden@gmail.com
 
 ## 5. Acknowledgments
