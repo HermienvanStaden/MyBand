@@ -62,6 +62,7 @@ In order to run this container you'll need docker installed.
     docker pull hermienvanstaden/myband-website
 
 4. To create an superuser account, use this command:
+
     python manage.py createsuperuser
 
 
