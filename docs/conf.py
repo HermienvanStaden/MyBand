@@ -1,9 +1,10 @@
 import os
 import sys
-import django
+
+sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../'))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'MyBand.settings'
-django.setup()
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MyBand.MyBand.settings')
 
 # Configuration file for the Sphinx documentation builder.
 #

@@ -7,7 +7,7 @@ Submodules
 MyBand.asgi module
 ------------------
 
-.. automodule:: MyBand.asgi
+.. automodule:: MyBand.MyBand.asgi
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ MyBand.asgi module
 MyBand.settings module
 ----------------------
 
-.. automodule:: MyBand.settings
+.. automodule:: MyBand.MyBand.settings
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ MyBand.settings module
 MyBand.urls module
 ------------------
 
-.. automodule:: MyBand.urls
+.. automodule:: MyBand.MyBand.urls
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ MyBand.urls module
 MyBand.wsgi module
 ------------------
 
-.. automodule:: MyBand.wsgi
+.. automodule:: MyBand.MyBand.wsgi
    :members:
    :undoc-members:
    :show-inheritance:
@@ -39,7 +39,7 @@ MyBand.wsgi module
 Module contents
 ---------------
 
-.. automodule:: MyBand
+.. automodule:: MyBand.MyBand
    :members:
    :undoc-members:
    :show-inheritance:
