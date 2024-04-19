@@ -59,11 +59,11 @@ In order to run this container you'll need docker installed.
 
 3. Pull image from DockerHub, by running:
 
-    docker pull hermienvanstaden/myband-website
+        docker pull hermienvanstaden/myband-website
 
 4. To create an superuser account, use this command:
 
-    python manage.py createsuperuser
+        python manage.py createsuperuser
 
 
 ## 2. Built With
