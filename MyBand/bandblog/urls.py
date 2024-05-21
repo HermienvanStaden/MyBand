@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView
 from django.urls import path, include
-from MyBand.bandblog.models import Post
+from .models import Post
 from . import views
 
 app_name = 'bandblog'

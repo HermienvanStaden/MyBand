@@ -32,9 +32,9 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'MyBand.bandhome',
-    'MyBand.bandblog',
-    'MyBand.bandtour',
+    'bandhome',
+    'bandblog',
+    'bandtour',
     'crispy_forms',
     'crispy_bootstrap5',
     'django_bootstrap5',
