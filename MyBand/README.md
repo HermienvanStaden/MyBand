@@ -61,7 +61,15 @@ In order to run this container you'll need docker installed.
 
         docker pull hermienvanstaden/myband-website
 
-4. To create an superuser account, use this command:
+4. Create image by running:
+
+        docker build -t myband-website ./
+
+5. Create container by running:
+
+        docker run -d -p 8000:8000 myband-website
+
+6. To create an superuser account, use this command:
 
         python manage.py createsuperuser
 
